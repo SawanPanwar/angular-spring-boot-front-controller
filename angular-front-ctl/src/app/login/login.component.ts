@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
       this.form.message = params['errorMessage'] || null;
-      console.log('msssssssssgggggggggggg = >', this.form.message)
+      console.log('msg = >', this.form.message)
     });
   }
 
@@ -58,5 +58,4 @@ export class LoginComponent implements OnInit {
   signUp() {
     this.router.navigateByUrl('signup');
   }
-
 }

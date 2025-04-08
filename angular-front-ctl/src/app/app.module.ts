@@ -11,7 +11,6 @@ import { SignupComponent } from './signup/signup.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UserComponent } from './user/user.component';
 import { UserlistComponent } from './user/userlist.component';
-import { AuthServiceService } from './auth-service.service';
 import { HttpServiceService } from './http-service.service';
 
 @NgModule({
@@ -31,9 +30,6 @@ import { HttpServiceService } from './http-service.service';
     HttpClientModule,
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS, useClass: AuthServiceService, multi: true
-    },
     HttpServiceService
   ],
   bootstrap: [AppComponent]
